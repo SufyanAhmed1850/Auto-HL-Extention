@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Auto HL",
+    "version": "0.0.1",
+    "description": "Automate your HL forms with a dark theme.",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://docs.google.com/forms/d/e/*",
+                "https://docs.google.com/forms/u/0/d/e/*"
+            ],
+            "js": ["content.js"]
+        }
+    ],
+    "permissions": ["activeTab", "debugger", "scripting"],
+    "icons": {
+        "128": "icon.png"
+    }
+}
